@@ -16,25 +16,24 @@ const userSchema = new Schema({
         type:String,
         required:true
     },
-    isSeller:{
-        type:Boolean,
-        default:false
-    },
-    img:{
-        type:String,
-        required:true
-    },
-    phone:{
-        type:String,
-        required:false
-    },
-    desc:{
-        type:String,
-        required:false
-    },
+    // isSeller:{
+    //     type:Boolean,
+    //     default:false
+    // },
+    // img:{
+    //     type:String,
+    //     required:true
+    // },
+    // phone:{
+    //     type:String,
+    //     required:false
+    // },
+    // desc:{
+    //     type:String,
+    //     required:false
+    // },
 },{
     timestamps:true
 });
-export default mongoose(
-    'User',userSchema
-)
+const User=mongoose.model('User',userSchema);
+export default User;
